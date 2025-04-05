@@ -9,5 +9,6 @@ Este projeto consiste em um código que valida e exibe informações sobre um en
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/meu-repositorio-endereco.git
-   cd meu-repositorio-endereco
+https://github.com/GuilhermeMSilveira/Exercicio-Tratamento-de-Erros.gdocker build -t torneio-futebol .
+it
+   cd Exercicio-Tratamento-de-Erros

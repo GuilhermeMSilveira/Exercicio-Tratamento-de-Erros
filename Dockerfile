@@ -1,15 +1,17 @@
-# Use a imagem oficial do Python como base
+# Usando a imagem base do Python
 FROM python:3.9-slim
 
-# Define o diretório de trabalho dentro do container
-WORKDIR /app
+# Atualiza o pip para a versão mais recente
+RUN python -m pip install --upgrade pip
 
-# Copia todos os arquivos do diretório local para dentro do container
-COPY . /app
+# Configura o diretório de trabalho
+WORKDIR /main
 
-# Instala as dependências do projeto, caso haja um requirements.txt
-# Caso não tenha, essa linha pode ser removida
+# Copia o conteúdo do projeto para o diretório de trabalho no container
+COPY . /main
+
+# Instala as dependências do projeto
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Define o comando padrão a ser executado no contêiner
+# Comando para rodar o aplicativo
 CMD ["python", "main.py"]
